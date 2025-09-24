@@ -39,7 +39,7 @@ namespace MultiTenantHMS.BLL.Helper
             { 
                 ["status"] = status, 
                 ["msg"] = msg, 
-                ["data"] = JsonSerializer.Serialize(data) 
+                ["data"] = Newtonsoft.Json.JsonConvert.SerializeObject(data) 
             };
             return response;
         }

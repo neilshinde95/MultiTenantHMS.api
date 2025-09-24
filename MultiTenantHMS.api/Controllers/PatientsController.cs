@@ -1,49 +1,47 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using MultiTenantHMS.BLL.Helper;
-using MultiTenantHMS.BLL.Interfaces;
+using MultiTenantHMS.BLL.Services;
 using MultiTenantHMS.DAL.Models;
-using System.Text.Json;
+using MultiTenantHMS.BLL.Interfaces;
+using MultiTenantHMS.BLL.BL;
+using System.Text.Json.Nodes;
+using System.Threading.Tasks;
 
 namespace MultiTenantHMS.api.Controllers
 {
-
     [Route("api/[controller]")]
     [ApiController]
     public class PatientsController : ControllerBase
     {
-        private readonly IPatientService _patientService;
+        private readonly ICommonService _service;
 
-        public PatientsController(IPatientService patientService)
+        public PatientsController(ICommonService service)
         {
-            _patientService = patientService;
+            _service = service;
         }
 
         [HttpPost("add")]
-        public async Task<IActionResult> AddPatient(PatientModel model)
+        public async Task<IActionResult> AddPatient([FromBody] PatientModel model)
         {
             try
             {
                 if (model == null)
                 {
-                    return new JsonResult(JsonHelper.Response(false, "Patient data cannot be empty.", null));
+                    return BadRequest(JsonHelper.Response(false, "Patient data cannot be empty.", null));
                 }
 
-                string result = await _patientService.AddPatientAsync(model);
-                if (result != "Success")
+                var result = await patient_bl.AddPatient(_service, model);
+                if ((bool)result["status"])
                 {
-                    // Assuming -1 indicates an error or failure from the service layer
-                    //return StatusCode(500, "An error occurred while adding the patient.");
-                    return new JsonResult(JsonHelper.Response(false, result, null));
+                    return Ok(result);
                 }
 
-                //return Ok(new { Message = "Patient added successfully.", PatientId = result });
-                return new JsonResult(JsonHelper.Response(true, "Patient added successfully.", result));
+                return BadRequest(result);
             }
-            catch (Exception ex)
+            catch (System.Exception ex)
             {
                 await ErrorLogger.LogErrorAsync(ex);
-                // return StatusCode(500, "An unexpected error occurred while processing your request.");
-                return new JsonResult(JsonHelper.Response(false, ex.Message.ToString(), null));
+                return StatusCode(500, JsonHelper.Response(false, ex.Message, null));
             }
         }
 
@@ -52,17 +50,18 @@ namespace MultiTenantHMS.api.Controllers
         {
             try
             {
-                var patient = await _patientService.GetPatientByIdAsync(id);
-                if (patient == null)
+                var result = await patient_bl.GetPatientById(_service, id);
+                if ((bool)result["status"] && result["data"] != null)
                 {
-                    return NotFound($"Patient with ID {id} not found.");
+                    return Ok(result);
                 }
-                return Ok(patient);
+
+                return NotFound(JsonHelper.Response(false, $"Patient with ID {id} not found.", null));
             }
-            catch (Exception ex)
+            catch (System.Exception ex)
             {
                 await ErrorLogger.LogErrorAsync(ex);
-                return StatusCode(500, "An error occurred while retrieving the patient.");
+                return StatusCode(500, JsonHelper.Response(false, ex.Message, null));
             }
         }
 
@@ -71,38 +70,43 @@ namespace MultiTenantHMS.api.Controllers
         {
             try
             {
-                var patients = await _patientService.GetAllPatientsAsync();
-                return Ok(patients);
+                var result = await patient_bl.GetAllPatients(_service);
+                if ((bool)result["status"])
+                {
+                    return Ok(result);
+                }
+
+                return NotFound(result);
             }
-            catch (Exception ex)
+            catch (System.Exception ex)
             {
                 await ErrorLogger.LogErrorAsync(ex);
-                return StatusCode(500, "An error occurred while retrieving all patients.");
+                return StatusCode(500, JsonHelper.Response(false, ex.Message, null));
             }
         }
 
         [HttpPut("update")]
-        public async Task<IActionResult> UpdatePatient(PatientModel patient)
+        public async Task<IActionResult> UpdatePatient([FromBody] PatientModel patient)
         {
             try
             {
                 if (patient == null)
                 {
-                    return BadRequest("Patient data cannot be empty.");
+                    return BadRequest(JsonHelper.Response(false, "Patient data cannot be empty.", null));
                 }
 
-                string result = await _patientService.UpdatePatientAsync(patient);
-                if (result != "Success")
+                var result = await patient_bl.UpdatePatient(_service, patient);
+                if ((bool)result["status"])
                 {
-                    return new JsonResult(JsonHelper.Response(false, result, null));
+                    return Ok(result);
                 }
-                return new JsonResult(JsonHelper.Response(true, "Patient updated successfully.", result));
+
+                return BadRequest(result);
             }
-      
-            catch (Exception ex)
+            catch (System.Exception ex)
             {
                 await ErrorLogger.LogErrorAsync(ex);
-                return new JsonResult(JsonHelper.Response(false, ex.Message.ToString(), null));
+                return StatusCode(500, JsonHelper.Response(false, ex.Message, null));
             }
         }
 
@@ -111,17 +115,18 @@ namespace MultiTenantHMS.api.Controllers
         {
             try
             {
-                string result = await _patientService.DeletePatientAsync(id);
-                if (result != "Success")
+                var result = await patient_bl.DeletePatient(_service, id);
+                if ((bool)result["status"])
                 {
-                    return new JsonResult(JsonHelper.Response(false, result, null));
-                }     
-                return new JsonResult(JsonHelper.Response(true, "Patient deleted successfully.", result));
+                    return Ok(result);
+                }
+
+                return BadRequest(result);
             }
-            catch (Exception ex)
+            catch (System.Exception ex)
             {
                 await ErrorLogger.LogErrorAsync(ex);
-                return new JsonResult(JsonHelper.Response(false, ex.Message.ToString(), null));
+                return StatusCode(500, JsonHelper.Response(false, ex.Message, null));
             }
         }
     }

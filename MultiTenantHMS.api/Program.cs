@@ -15,7 +15,7 @@ builder.Services.AddSwaggerGen(c =>
 
 
 // Register the PatientService and its interface for dependency injection.
-builder.Services.AddScoped<IPatientService, PatientService>();
+builder.Services.AddScoped<ICommonService, CommonService>();
 
 var app = builder.Build();
 
