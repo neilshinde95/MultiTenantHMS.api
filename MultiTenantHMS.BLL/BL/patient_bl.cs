@@ -9,7 +9,7 @@ namespace MultiTenantHMS.BLL.BL
 {
     public static class patient_bl
     {
-        private const string _procedureName = "sp_manage_patient";
+        private const string _procedureName = SpCatalog.ManagePatient;
 
         public static async Task<JsonObject> AddPatient(ICommonService service, PatientModel model)
         {
