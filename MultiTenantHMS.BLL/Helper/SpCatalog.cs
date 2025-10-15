@@ -9,5 +9,7 @@ namespace MultiTenantHMS.BLL.Helper
     public static class SpCatalog
     {
         public const string ManagePatient = "sp_manage_patient";
+
+        public const string ManageDepartment = "sp_manage_department";
     }
 }
