@@ -33,7 +33,7 @@ namespace MultiTenantHMS.BLL.BL
                 ["Id"] = 0,
                 ["Opration"] = "i", // 'i' for insert
                 ["ProcedureName"] = _procedureName,
-                ["JsonData"] = Newtonsoft.Json.JsonConvert.SerializeObject(model)
+                ["JsonData"] = JsonHelper.Serialize(model)
             };
             return await service.ManageAsync(requestModel);
         }
@@ -45,7 +45,7 @@ namespace MultiTenantHMS.BLL.BL
                 ["Id"] = model.DepartmentId,
                 ["Opration"] = "u", // 'u' for update
                 ["ProcedureName"] = _procedureName,
-                ["JsonData"] = Newtonsoft.Json.JsonConvert.SerializeObject(model)
+                ["JsonData"] = JsonHelper.Serialize(model)
             };
             return await service.ManageAsync(requestModel);
         }
