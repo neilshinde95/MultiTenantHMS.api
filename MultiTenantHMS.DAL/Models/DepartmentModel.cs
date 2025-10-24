@@ -25,7 +25,7 @@ namespace MultiTenantHMS.DAL.Models
         [JsonPropertyName("createdon")]
         public DateTime? CreatedOn { get; set; }
 
-        [JsonPropertyName("craetedby")]
+        [JsonPropertyName("createdby")]
         public string CreatedBy { get; set; }
 
         [JsonPropertyName("modifyon")]
