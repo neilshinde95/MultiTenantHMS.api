@@ -69,7 +69,7 @@ namespace MultiTenantHMS.api.Controllers
         {
             try
             {
-                if (department == null || department.DepartmentId <= 0)
+                if (department == null)
                 {
                     return BadRequest(JsonHelper.Response(false, "Department data cannot be empty.", null));
                 }

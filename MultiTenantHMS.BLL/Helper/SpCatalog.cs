@@ -11,5 +11,7 @@ namespace MultiTenantHMS.BLL.Helper
         public const string ManagePatient = "sp_manage_patient";
 
         public const string ManageDepartment = "sp_manage_department";
+
+        public const string ManageService = "sp_manage_service";
     }
 }
