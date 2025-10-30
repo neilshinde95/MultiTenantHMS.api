@@ -5,8 +5,7 @@ using MultiTenantHMS.BLL.Helper;
 using MultiTenantHMS.BLL.BL;
 using MultiTenantHMS.DAL.Models;
 
-
-namespace MultiTenantHMS.api.Controllers
+namespace MultiTenantHMS.api.Controllers.Master
 {
     [Route("api/[controller]")]
     [ApiController]
@@ -31,7 +30,7 @@ namespace MultiTenantHMS.api.Controllers
                 }
                 return NotFound(result);
             }
-            catch (System.Exception ex)
+            catch (Exception ex)
             {
 
                 await ErrorLogger.LogErrorAsync(ex);
@@ -57,7 +56,7 @@ namespace MultiTenantHMS.api.Controllers
                 }
                 return BadRequest(result);
             }
-            catch (System.Exception ex)
+            catch (Exception ex)
             {
                 await ErrorLogger.LogErrorAsync(ex);
                 return StatusCode(500, JsonHelper.Response(false, ex.Message, null));
@@ -80,7 +79,7 @@ namespace MultiTenantHMS.api.Controllers
                 }
                 return NotFound(result);
             }
-            catch (System.Exception ex)
+            catch (Exception ex)
             {
                 await ErrorLogger.LogErrorAsync(ex);
                 return StatusCode(500, JsonHelper.Response(false, ex.Message, null));
@@ -99,7 +98,7 @@ namespace MultiTenantHMS.api.Controllers
                 }
                 return NotFound(JsonHelper.Response(false, $"Department with ID {id} not found.", null));
             }
-            catch (System.Exception ex)
+            catch (Exception ex)
             {
                 await ErrorLogger.LogErrorAsync(ex);
                 return StatusCode(500, JsonHelper.Response(false, ex.Message, null));
@@ -119,7 +118,7 @@ namespace MultiTenantHMS.api.Controllers
                 }
                 return NotFound(result);
             }
-            catch (System.Exception ex)
+            catch (Exception ex)
             {
                 await ErrorLogger.LogErrorAsync(ex);
                 return StatusCode(500, JsonHelper.Response(false, ex.Message, null));

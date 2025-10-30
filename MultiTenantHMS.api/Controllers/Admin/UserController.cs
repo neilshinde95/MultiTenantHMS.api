@@ -20,9 +20,6 @@ namespace MultiTenantHMS.api.Controllers.Admin
         [HttpGet("GetAllUser")]
         public async Task<IActionResult> GetAllUser()
         {
-            if(!ModelState.IsValid) 
-                return BadRequest(ModelState);
-
             var user = await user_bl.GetUser(_service);
             return Ok(user);
         }

@@ -20,30 +20,18 @@ namespace MultiTenantHMS.api.Controllers.Master
             _service = service;
         }
 
-        [HttpPost("add")]
-        public async Task<IActionResult> AddPatient([FromBody] PatientModel model)
-        {
-            try
-            {
-                if (model == null)
-                {
-                    return BadRequest(JsonHelper.Response(false, "Patient data cannot be empty.", null));
-                }
+        //[HttpPost("add")]
+        //public async Task<IActionResult> AddPatient([FromBody] PatientModel model)
+        //{
+        //    if(!ModelState.IsValid)
+        //        return BadRequest("");
 
-                var result = await patient_bl.AddPatient(_service, model);
-                if ((bool)result["status"])
-                {
-                    return Ok(result);
-                }
-
-                return BadRequest(result);
-            }
-            catch (Exception ex)
-            {
-                await ErrorLogger.LogErrorAsync(ex);
-                return StatusCode(500, JsonHelper.Response(false, ex.Message, null));
-            }
-        }
+        //    var result = await patient_bl.AddPatient(_service, model);
+        //    if ((bool)result["status"])
+        //    {
+        //        return Ok(result);
+        //    }          
+        //}
 
         [HttpGet("{id}")]
         public async Task<IActionResult> GetPatientById(int id)
@@ -68,26 +56,21 @@ namespace MultiTenantHMS.api.Controllers.Master
         [HttpGet]
         public async Task<IActionResult> GetAllPatients()
         {
-            if(!ModelState.IsValid)
-                return BadRequest(ModelState);
-            var result = await patient_bl.GetAllPatients(_service);
-            return Ok(result);
+            try
+            {
+                var result = await patient_bl.GetAllPatients(_service);
+                if ((bool)result["status"])
+                {
+                    return Ok(result);
+                }
 
-            //try
-            //{
-            //    var result = await patient_bl.GetAllPatients(_service);
-            //    if ((bool)result["status"])
-            //    {
-            //        return Ok(result);
-            //    }
-
-            //    return NotFound(result);
-            //}
-            //catch (Exception ex)
-            //{
-            //    await ErrorLogger.LogErrorAsync(ex);
-            //    return StatusCode(500, JsonHelper.Response(false, ex.Message, null));
-            //}
+                return NotFound(result);
+            }
+            catch (Exception ex)
+            {
+                await ErrorLogger.LogErrorAsync(ex);
+                return StatusCode(500, JsonHelper.Response(false, ex.Message, null));
+            }
         }
 
         [HttpPut("update")]

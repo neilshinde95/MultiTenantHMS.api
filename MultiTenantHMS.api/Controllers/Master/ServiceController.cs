@@ -4,7 +4,7 @@ using MultiTenantHMS.BLL.Helper;
 using MultiTenantHMS.BLL.Interfaces;
 using MultiTenantHMS.DAL.Models;
 
-namespace MultiTenantHMS.api.Controllers
+namespace MultiTenantHMS.api.Controllers.Master
 {
     [Route("api/[controller]")]
     [ApiController]
