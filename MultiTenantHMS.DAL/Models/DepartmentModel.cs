@@ -37,20 +37,5 @@ namespace MultiTenantHMS.DAL.Models
         [JsonPropertyName("isdeleted")]
         public int IsDeleted { get; set; }
 
-
-
-
-//        CREATE TABLE tblDepartment
-//(
-//    departmentId INT IDENTITY(1, 1) NOT NULL,
-//    departmentName varchar(100) NOT NULL,
-//    description varchar(200) NULL,
-//    Status bit NOT NULL,
-//    CreatedOn datetime NULL,
-//    CreatedBy nvarchar(100) NULL,
-//    ModifyOn datetime NULL,
-//    ModifyBy nvarchar(100) NULL,
-//    IsDeleted bit NOT NULL
-//)
     }
 }
