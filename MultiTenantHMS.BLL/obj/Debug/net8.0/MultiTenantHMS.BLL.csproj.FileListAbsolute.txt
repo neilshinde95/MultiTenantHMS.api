@@ -1,0 +1,16 @@
+D:\Surat\Product HMS\MultiTenantHMS.BLL\bin\Debug\net8.0\MultiTenantHMS.BLL.deps.json
+D:\Surat\Product HMS\MultiTenantHMS.BLL\bin\Debug\net8.0\MultiTenantHMS.BLL.dll
+D:\Surat\Product HMS\MultiTenantHMS.BLL\bin\Debug\net8.0\MultiTenantHMS.BLL.pdb
+D:\Surat\Product HMS\MultiTenantHMS.BLL\bin\Debug\net8.0\MultiTenantHMS.DAL.dll
+D:\Surat\Product HMS\MultiTenantHMS.BLL\bin\Debug\net8.0\MultiTenantHMS.DAL.pdb
+D:\Surat\Product HMS\MultiTenantHMS.BLL\obj\Debug\net8.0\MultiTenantHMS.BLL.csproj.AssemblyReference.cache
+D:\Surat\Product HMS\MultiTenantHMS.BLL\obj\Debug\net8.0\MultiTenantHMS.BLL.GeneratedMSBuildEditorConfig.editorconfig
+D:\Surat\Product HMS\MultiTenantHMS.BLL\obj\Debug\net8.0\MultiTenantHMS.BLL.AssemblyInfoInputs.cache
+D:\Surat\Product HMS\MultiTenantHMS.BLL\obj\Debug\net8.0\MultiTenantHMS.BLL.AssemblyInfo.cs
+D:\Surat\Product HMS\MultiTenantHMS.BLL\obj\Debug\net8.0\MultiTenantHMS.BLL.csproj.CoreCompileInputs.cache
+D:\Surat\Product HMS\MultiTenantHMS.BLL\obj\Debug\net8.0\MultiTenantHMS.BLL.sourcelink.json
+D:\Surat\Product HMS\MultiTenantHMS.BLL\obj\Debug\net8.0\MultiTen.C932EF1E.Up2Date
+D:\Surat\Product HMS\MultiTenantHMS.BLL\obj\Debug\net8.0\MultiTenantHMS.BLL.dll
+D:\Surat\Product HMS\MultiTenantHMS.BLL\obj\Debug\net8.0\refint\MultiTenantHMS.BLL.dll
+D:\Surat\Product HMS\MultiTenantHMS.BLL\obj\Debug\net8.0\MultiTenantHMS.BLL.pdb
+D:\Surat\Product HMS\MultiTenantHMS.BLL\obj\Debug\net8.0\ref\MultiTenantHMS.BLL.dll
