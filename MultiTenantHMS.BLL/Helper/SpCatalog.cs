@@ -10,9 +10,8 @@ namespace MultiTenantHMS.BLL.Helper
     {
         #region Master
         public const string ManagePatient = "sp_manage_patient";
-
+        public const string ManageBuilding = "sp_manage_building";
         public const string ManageDepartment = "sp_manage_department";
-
         public const string ManageService = "sp_manage_service";
         #endregion
 
