@@ -1,4 +1,5 @@
-﻿using MultiTenantHMS.BLL.Interfaces;
+﻿using MultiTenantHMS.BLL.BL;
+using MultiTenantHMS.BLL.Interfaces;
 using MultiTenantHMS.BLL.Services;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -6,6 +7,7 @@ var builder = WebApplication.CreateBuilder(args);
 // Add services to the container.
 
 var allowedOrigins = builder.Configuration.GetSection("AllowedOrigins").Get<string[]>();
+
 
 builder.Services.AddCors(options =>
 {
@@ -26,13 +28,12 @@ builder.Services.AddCors(options =>
 });
 
 builder.Services.AddControllers();
-// Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
+
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen(c =>
 {
     c.SwaggerDoc("v1", new Microsoft.OpenApi.Models.OpenApiInfo { Title = "MultiTenantHMS.api", Version = "v1" });
 });
-
 
 // Register the PatientService and its interface for dependency injection.
 builder.Services.AddScoped<ICommonService, CommonService>();

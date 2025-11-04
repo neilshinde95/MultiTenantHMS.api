@@ -10,32 +10,31 @@ namespace MultiTenantHMS.DAL.Models
 {
     public class RoleModel
     {
-        [JsonPropertyName("roleId")]
+        [JsonPropertyName("RoleId")]
         public int RoleId { get; set; }
 
-        [JsonPropertyName("rolename")]
-        public string RoleName { get; set; }
-        
-        [JsonPropertyName("roledescription")]
-        
-        public string RoleDescription { get; set; }
+        [JsonPropertyName("RoleName")]
+        public string RoleName { get; set; } = string.Empty;
 
-        [JsonPropertyName("status")]
+        [JsonPropertyName("RoleDescription")]
+        public string RoleDescription { get; set; } = string.Empty;
+               
+        [JsonPropertyName("Status")]
         public int Status { get; set; }
 
-        [JsonPropertyName("createdon")]
+        [JsonPropertyName("CreatedOn")]
         public DateTime? CreatedOn { get; set; }
 
-        [JsonPropertyName("createdby")]
-        public string CreatedBy { get; set; }
+        [JsonPropertyName("CreatedBy")]
+        public string? CreatedBy { get; set; }
 
-        [JsonPropertyName("modifyon")]
+        [JsonPropertyName("ModifyOn")]
         public DateTime? ModifyOn { get; set; }
 
-        [JsonPropertyName("modifyby")]
-        public string ModifyBy { get; set; }
+        [JsonPropertyName("ModifyBy")]
+        public string? ModifyBy { get; set; }
 
-        [JsonPropertyName("isdeleted")]
+        [JsonPropertyName("IsDeleted")]
         public int IsDeleted { get; set; }
 
 

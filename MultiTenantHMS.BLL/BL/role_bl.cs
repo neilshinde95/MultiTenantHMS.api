@@ -12,70 +12,114 @@ using System.Threading.Tasks;
 
 namespace MultiTenantHMS.BLL.BL
 {
-    public static class role_bl
+    public class role_bl
     {
         // Implementation for role_bl goes here
         private const string _procedureName = SpCatalog.ManageRole;
 
-        public static async Task<JsonObject> AddService(ICommonService service, RoleModel model)
+        public static async Task<JsonObject> GetRole(ICommonService service)
         {
-            var requestModel = new JsonObject
+            try
             {
-                ["Id"] = 0,
-                ["Opration"] = "i",
-                ["ProcedureName"] = _procedureName,
-                ["JsonData"] = JsonHelper.Serialize(model)
-            };
-            return await service.ManageAsync(requestModel);
+                var requestModel = new JsonObject
+                {
+                    ["Id"] = 0,
+                    ["Opration"] = "s",
+                    ["ProcedureName"] = _procedureName,
+                    ["JsonData"] = null
+                };
+                return await service.ManageAsync(requestModel);
+            }
+            catch (Exception ex)
+            {
+                await ErrorLogger.LogErrorAsync(ex); // ensure logging is awaited if it's async
+                return JsonHelper.Response(false, "Something went wrong while processing your request.", null);
+
+            }
         }
 
-        public static async Task<JsonObject> UpdateRole(ICommonService service, RoleModel model)
+        public static async Task<JsonObject> GetRoleById(ICommonService service, int roleId)
         {
-            var requestModel = new JsonObject
+            try
             {
-                ["Id"] = model.RoleId,
-                ["Opration"] = "u",
-                ["ProcedureName"] = _procedureName,
-                ["JsonData"] = JsonHelper.Serialize(model)
-            };
-            return await service.ManageAsync(requestModel);
+                var requestModel = new JsonObject
+                {
+                    ["Id"] = roleId,
+                    ["Opration"] = "s",
+                    ["ProcedureName"] = _procedureName,
+                    ["JsonData"] = null
+                };
+                return await service.ManageAsync(requestModel);
+
+            }
+            catch (Exception ex)
+            {
+                await ErrorLogger.LogErrorAsync(ex); // ensure logging is awaited if it's async
+                return JsonHelper.Response(false, "Something went wrong while processing your request.", null);
+
+            }
         }
 
-        public static async Task<JsonObject> GetAllRoles(ICommonService service)
+        public static async Task<JsonObject> AddRole(ICommonService service, RoleModel role)
         {
-            var requestModel = new JsonObject
+            try
             {
-                ["Id"] = 0,
-                ["Opration"] = "s",
-                ["ProcedureName"] = _procedureName,
-                ["JsonData"] = null
-            };
-            return await service.ManageAsync(requestModel);
+                var requestModel = new JsonObject
+                {
+                    ["Id"] = 0,
+                    ["Opration"] = "i",
+                    ["ProcedureName"] = _procedureName,
+                    ["JsonData"] = JsonHelper.Serialize(role)
+                };
+                return await service.ManageAsync(requestModel);
+            }
+            catch (Exception ex)
+            {
+                await ErrorLogger.LogErrorAsync(ex); // ensure logging is awaited if it's async
+                return JsonHelper.Response(false, "Something went wrong while processing your request.", null);
+            }
         }
 
-        public static async Task<JsonObject> GetRoleById(ICommonService service, int RoleId)
+        public static async Task<JsonObject> UpdateRole(ICommonService service, RoleModel role)
         {
-            var requestModel = new JsonObject
+            try
             {
-                ["Id"] = RoleId,
-                ["Opration"] = "s",
-                ["ProcedureName"] = _procedureName,
-                ["JsonData"] = null
-            };
-            return await service.ManageAsync(requestModel);
+                var requestModel = new JsonObject
+                {
+                    ["Id"] = role.RoleId,
+                    ["Opration"] = "u",
+                    ["ProcedureName"] = _procedureName,
+                    ["JsonData"] = JsonHelper.Serialize(role)
+                };
+                return await service.ManageAsync(requestModel);
+            }
+            catch (Exception ex)
+            {
+                await ErrorLogger.LogErrorAsync(ex); // ensure logging is awaited if it's async
+                return JsonHelper.Response(false, "Something went wrong while processing your request.", null);
+
+            }
         }
 
-        public static async Task<JsonObject> DeleteRole(ICommonService service, int RoleId)
+        public static async Task<JsonObject> DeleteRole(ICommonService service, int roleId)
         {
-            var requestModel = new JsonObject
+            try
             {
-                ["Id"] = RoleId,
-                ["Opration"] = "d",
-                ["ProcedureName"] = _procedureName,
-                ["JsonData"] = null
-            };
-            return await service.ManageAsync(requestModel);
-        }
+                var requestModel = new JsonObject
+                {
+                    ["Id"] = roleId,
+                    ["Opration"] = "d",
+                    ["ProcedureName"] = _procedureName,
+                    ["JsonData"] = null
+                };
+                return await service.ManageAsync(requestModel);
+            }
+            catch (Exception ex)
+            {
+                await ErrorLogger.LogErrorAsync(ex); // ensure logging is awaited if it's async
+                return JsonHelper.Response(false, "Something went wrong while processing your request.", null);
 
+            }
+        }
     }
 }
