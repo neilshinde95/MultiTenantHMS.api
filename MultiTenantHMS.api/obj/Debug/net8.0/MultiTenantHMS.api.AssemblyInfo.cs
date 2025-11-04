@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("MultiTenantHMS.api")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+9662c5cc2fb3d4c4d4f55c97fa2ad46f4373134b")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+dc438722da374704f299bffd21c3b39071dc488d")]
 [assembly: System.Reflection.AssemblyProductAttribute("MultiTenantHMS.api")]
 [assembly: System.Reflection.AssemblyTitleAttribute("MultiTenantHMS.api")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
