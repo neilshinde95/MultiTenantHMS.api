@@ -20,30 +20,18 @@ namespace MultiTenantHMS.api.Controllers
             _service = service;
         }
 
-        [HttpPost("add")]
-        public async Task<IActionResult> AddPatient([FromBody] PatientModel model)
-        {
-            try
-            {
-                if (model == null)
-                {
-                    return BadRequest(JsonHelper.Response(false, "Patient data cannot be empty.", null));
-                }
+        //[HttpPost("add")]
+        //public async Task<IActionResult> AddPatient([FromBody] PatientModel model)
+        //{
+        //    if(!ModelState.IsValid)
+        //        return BadRequest("");
 
-                var result = await patient_bl.AddPatient(_service, model);
-                if ((bool)result["status"])
-                {
-                    return Ok(result);
-                }
-
-                return BadRequest(result);
-            }
-            catch (System.Exception ex)
-            {
-                await ErrorLogger.LogErrorAsync(ex);
-                return StatusCode(500, JsonHelper.Response(false, ex.Message, null));
-            }
-        }
+        //    var result = await patient_bl.AddPatient(_service, model);
+        //    if ((bool)result["status"])
+        //    {
+        //        return Ok(result);
+        //    }          
+        //}
 
         [HttpGet("{id}")]
         public async Task<IActionResult> GetPatientById(int id)

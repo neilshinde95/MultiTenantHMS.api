@@ -13,6 +13,7 @@ namespace MultiTenantHMS.BLL.BL
 
         public static async Task<JsonObject> AddPatient(ICommonService service, PatientModel model)
         {
+
             var requestModel = new JsonObject
             {
                 ["Id"] = 0,
