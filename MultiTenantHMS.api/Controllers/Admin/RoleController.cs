@@ -32,8 +32,8 @@ namespace MultiTenantHMS.api.Controllers.Admin
             return Ok(response);
         }
 
-        [HttpPost("Add")]
-        public async Task<IActionResult> AddUser(RoleModel role)
+        [HttpPost("addRole")]
+        public async Task<IActionResult> AddRole(RoleModel role)
         {
             if (!ModelState.IsValid)
                 return BadRequest(ModelState);
@@ -42,8 +42,8 @@ namespace MultiTenantHMS.api.Controllers.Admin
             return Ok(response);
         }
 
-        [HttpPut("Update")]
-        public async Task<IActionResult> UpdateUser(RoleModel role)
+        [HttpPut("updateRole")]
+        public async Task<IActionResult> UpdateRole(RoleModel role)
         {
             if (!ModelState.IsValid)
                 return BadRequest(ModelState);
@@ -52,7 +52,7 @@ namespace MultiTenantHMS.api.Controllers.Admin
             return Ok(response);
         }
 
-        [HttpDelete("Delete/{role}")]
+        [HttpDelete("deleteRole/{roleId}")]
         public async Task<IActionResult> DeleteRole(int roleId)
         {
             if (roleId == 0)

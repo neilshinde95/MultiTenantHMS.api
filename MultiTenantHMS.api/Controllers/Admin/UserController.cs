@@ -17,14 +17,14 @@ namespace MultiTenantHMS.api.Controllers.Admin
             _service = service;
         }
 
-        [HttpGet("GetAllUser")]
+        [HttpGet("GetAll")]
         public async Task<IActionResult> GetAllUser()
         {
             var user = await user_bl.GetUser(_service);
             return Ok(user);
         }
 
-        [HttpGet("GetUserById/{userId}")]
+        [HttpGet("GetById/{userId}")]
         public async Task<IActionResult> GetUserById(int userId)
         {
             if (userId == 0)
@@ -33,7 +33,7 @@ namespace MultiTenantHMS.api.Controllers.Admin
             return Ok(response);
         }
 
-        [HttpPost("AddUser")]
+        [HttpPost("addUser")]
         public async Task<IActionResult> AddUser(UserModel user)
         {
             if(!ModelState.IsValid)
@@ -43,7 +43,7 @@ namespace MultiTenantHMS.api.Controllers.Admin
             return Ok(response);
         }
 
-        [HttpPut("UpdateUser")]
+        [HttpPut("updateUser")]
         public async Task<IActionResult> UpdateUser (UserModel user)
         {
             if(!ModelState.IsValid)
@@ -53,7 +53,7 @@ namespace MultiTenantHMS.api.Controllers.Admin
             return Ok(response);
         }
 
-        [HttpDelete("DeleteUser/{userId}")]
+        [HttpDelete("deleteUser/{userId}")]
         public async Task<IActionResult> DeleteUser(int userId)
         {
             if(userId == 0)

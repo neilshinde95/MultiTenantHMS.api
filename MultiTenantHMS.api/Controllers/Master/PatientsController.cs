@@ -33,26 +33,6 @@ namespace MultiTenantHMS.api.Controllers.Master
         //    }          
         //}
 
-        [HttpGet("{id}")]
-        public async Task<IActionResult> GetPatientById(int id)
-        {
-            try
-            {
-                var result = await patient_bl.GetPatientById(_service, id);
-                if ((bool)result["status"] && result["data"] != null)
-                {
-                    return Ok(result);
-                }
-
-                return NotFound(JsonHelper.Response(false, $"Patient with ID {id} not found.", null));
-            }
-            catch (Exception ex)
-            {
-                await ErrorLogger.LogErrorAsync(ex);
-                return StatusCode(500, JsonHelper.Response(false, ex.Message, null));
-            }
-        }
-
         [HttpGet]
         public async Task<IActionResult> GetAllPatients()
         {
@@ -73,7 +53,28 @@ namespace MultiTenantHMS.api.Controllers.Master
             }
         }
 
-        [HttpPut("update")]
+        [HttpGet("GetById{id}")]
+        public async Task<IActionResult> GetPatientById(int id)
+        {
+            try
+            {
+                var result = await patient_bl.GetPatientById(_service, id);
+                if ((bool)result["status"] && result["data"] != null)
+                {
+                    return Ok(result);
+                }
+
+                return NotFound(JsonHelper.Response(false, $"Patient with ID {id} not found.", null));
+            }
+            catch (Exception ex)
+            {
+                await ErrorLogger.LogErrorAsync(ex);
+                return StatusCode(500, JsonHelper.Response(false, ex.Message, null));
+            }
+        }
+
+
+        [HttpPut("updatePatient")]
         public async Task<IActionResult> UpdatePatient([FromBody] PatientModel patient)
         {
             try
@@ -98,7 +99,7 @@ namespace MultiTenantHMS.api.Controllers.Master
             }
         }
 
-        [HttpDelete("{id}")]
+        [HttpDelete("deletePatient{id}")]
         public async Task<IActionResult> DeletePatient(int id)
         {
             try

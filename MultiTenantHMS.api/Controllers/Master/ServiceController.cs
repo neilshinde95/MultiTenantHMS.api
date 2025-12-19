@@ -35,7 +35,7 @@ namespace MultiTenantHMS.api.Controllers.Master
             }
         }
 
-        [HttpGet("{id}")]
+        [HttpGet("GetById{id}")]
         public async Task<IActionResult> GetServiceById(int id)
         {
             try
@@ -54,7 +54,7 @@ namespace MultiTenantHMS.api.Controllers.Master
             }
         }
 
-        [HttpPost("add")]
+        [HttpPost("addService")]
         public async Task<IActionResult> AddService([FromBody] ServiceModel model)
         {
             try
@@ -77,7 +77,7 @@ namespace MultiTenantHMS.api.Controllers.Master
             }
         }
 
-        [HttpPut("update")]
+        [HttpPut("updateService")]
         public async Task<IActionResult> UpdateService([FromBody] ServiceModel model)
         {
             try
@@ -100,7 +100,7 @@ namespace MultiTenantHMS.api.Controllers.Master
             }
         }
 
-        [HttpDelete("delete/{id}")]
+        [HttpDelete("deleteService/{id}")]
         public async Task<IActionResult> DeleteService(int id)
         {
             try

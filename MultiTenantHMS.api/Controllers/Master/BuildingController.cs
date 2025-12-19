@@ -33,8 +33,8 @@ namespace MultiTenantHMS.api.Controllers.Master
             return Ok(response);
         }
 
-        [HttpPost("Add")]
-        public async Task<IActionResult> AddUser(BuildingModel building)
+        [HttpPost("addBuilding")]
+        public async Task<IActionResult> AddBuilding(BuildingModel building)
         {
             if (!ModelState.IsValid)
                 return BadRequest(ModelState);
@@ -43,7 +43,7 @@ namespace MultiTenantHMS.api.Controllers.Master
             return Ok(response);
         }
 
-        [HttpPut("Update")]
+        [HttpPut("updateBuilding")]
         public async Task<IActionResult> UpdateBuilding(BuildingModel building)
         {
             if (!ModelState.IsValid)
@@ -53,7 +53,7 @@ namespace MultiTenantHMS.api.Controllers.Master
             return Ok(response);
         }
 
-        [HttpDelete("Delete/{buildingId}")]
+        [HttpDelete("deleteBuilding/{buildingId}")]
         public async Task<IActionResult> DeleteBuilding(int buildingId)
         {
             if (buildingId == 0)

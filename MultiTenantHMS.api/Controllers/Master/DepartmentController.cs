@@ -38,8 +38,27 @@ namespace MultiTenantHMS.api.Controllers.Master
 
             }
         }
+        
+        [HttpGet("GetById{id}")]        
+        public async Task<IActionResult> GetDepartmentById(int id)
+        {
+            try
+            {
+                var result = await department_bl.GetDepartmentById(_service, id);
+                if ((bool)result["status"] && result["data"] != null)
+                {
+                    return Ok(result);
+                }
+                return NotFound(JsonHelper.Response(false, $"Department with ID {id} not found.", null));
+            }
+            catch (Exception ex)
+            {
+                await ErrorLogger.LogErrorAsync(ex);
+                return StatusCode(500, JsonHelper.Response(false, ex.Message, null));
+            }
+        }
 
-        [HttpPost("add")]
+        [HttpPost("addDepartment")]
         public async Task<IActionResult> AddDepartment([FromBody] DepartmentModel department)
         {
             try
@@ -63,7 +82,7 @@ namespace MultiTenantHMS.api.Controllers.Master
             }
         }
 
-        [HttpPut("update")]
+        [HttpPut("updateDepartment")]
         public async Task<IActionResult> UpdateDepartment([FromBody] DepartmentModel department)
         {
             try
@@ -86,27 +105,7 @@ namespace MultiTenantHMS.api.Controllers.Master
             }
         }
 
-        [HttpGet("{id}")]
-        public async Task<IActionResult> GetDepartmentById(int id)
-        {
-            try
-            {
-                var result = await department_bl.GetDepartmentById(_service, id);
-                if ((bool)result["status"] && result["data"] != null)
-                {
-                    return Ok(result);
-                }
-                return NotFound(JsonHelper.Response(false, $"Department with ID {id} not found.", null));
-            }
-            catch (Exception ex)
-            {
-                await ErrorLogger.LogErrorAsync(ex);
-                return StatusCode(500, JsonHelper.Response(false, ex.Message, null));
-            }
-        }
-
-
-        [HttpDelete("{id}")]
+        [HttpDelete("deleteDepartment{id}")]
         public async Task<IActionResult> DeleteDepartment(int id)
         {
             try
