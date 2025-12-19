@@ -1,9 +1,11 @@
 ﻿using MultiTenantHMS.BLL.Helper;
 using MultiTenantHMS.BLL.Interfaces;
 using MultiTenantHMS.DAL.Models;
+using Newtonsoft.Json.Linq;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Runtime.InteropServices.JavaScript;
 using System.Text;
 using System.Text.Json.Nodes;
 using System.Threading.Tasks;
@@ -12,6 +14,7 @@ namespace MultiTenantHMS.BLL.BL
 {
     public class role_bl
     {
+        // Implementation for role_bl goes here
         private const string _procedureName = SpCatalog.ManageRole;
 
         public static async Task<JsonObject> GetRole(ICommonService service)

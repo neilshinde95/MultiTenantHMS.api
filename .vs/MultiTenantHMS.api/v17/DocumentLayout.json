@@ -1,7 +1,12 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "D:\\Surat\\Product HMS\\",
-  "Documents": [],
+  "WorkspaceRootPath": "C:\\Users\\swapn\\source\\repos\\MultiTenantHMS.api\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{774475EA-27FE-46AB-BE9E-68DCEB26BBFC}|MultiTenantHMS.api\\MultiTenantHMS.api.csproj|c:\\users\\swapn\\source\\repos\\multitenanthms.api\\multitenanthms.api\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{774475EA-27FE-46AB-BE9E-68DCEB26BBFC}|MultiTenantHMS.api\\MultiTenantHMS.api.csproj|solutionrelative:multitenanthms.api\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    }
+  ],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
@@ -9,11 +14,20 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": -1,
+          "SelectedChildIndex": 0,
           "Children": [
             {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "C:\\Users\\swapn\\source\\repos\\MultiTenantHMS.api\\MultiTenantHMS.api\\appsettings.json",
+              "RelativeDocumentMoniker": "MultiTenantHMS.api\\appsettings.json",
+              "ToolTip": "C:\\Users\\swapn\\source\\repos\\MultiTenantHMS.api\\MultiTenantHMS.api\\appsettings.json",
+              "RelativeToolTip": "MultiTenantHMS.api\\appsettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-11-04T14:37:21.243Z",
+              "EditorCaption": ""
             }
           ]
         }

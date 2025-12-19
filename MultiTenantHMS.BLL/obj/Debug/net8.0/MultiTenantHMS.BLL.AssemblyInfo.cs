@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("MultiTenantHMS.BLL")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+6007bb807aa6f784f171a2091d9c965e2716c14b")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+dc438722da374704f299bffd21c3b39071dc488d")]
 [assembly: System.Reflection.AssemblyProductAttribute("MultiTenantHMS.BLL")]
 [assembly: System.Reflection.AssemblyTitleAttribute("MultiTenantHMS.BLL")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

@@ -1,6 +1,80 @@
 [
   {
-    "ContainingType": "MultiTenantHMS.api.Controllers.DepartmentController",
+    "ContainingType": "MultiTenantHMS.api.Controllers.Master.BuildingController",
+    "Method": "AddUser",
+    "RelativePath": "api/Building/Add",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "building",
+        "Type": "MultiTenantHMS.DAL.Models.BuildingModel",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "MultiTenantHMS.api.Controllers.Master.BuildingController",
+    "Method": "DeleteBuilding",
+    "RelativePath": "api/Building/Delete/{buildingId}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "buildingId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "MultiTenantHMS.api.Controllers.Master.BuildingController",
+    "Method": "GetAllBuilding",
+    "RelativePath": "api/Building/GetAll",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "MultiTenantHMS.api.Controllers.Master.BuildingController",
+    "Method": "GetBuildingById",
+    "RelativePath": "api/Building/GetById/{BuildingId}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "BuildingId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "MultiTenantHMS.api.Controllers.Master.BuildingController",
+    "Method": "UpdateBuilding",
+    "RelativePath": "api/Building/Update",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "building",
+        "Type": "MultiTenantHMS.DAL.Models.BuildingModel",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "MultiTenantHMS.api.Controllers.Master.DepartmentController",
     "Method": "GetAllDepartments",
     "RelativePath": "api/Department",
     "HttpMethod": "GET",
@@ -10,7 +84,7 @@
     "ReturnTypes": []
   },
   {
-    "ContainingType": "MultiTenantHMS.api.Controllers.DepartmentController",
+    "ContainingType": "MultiTenantHMS.api.Controllers.Master.DepartmentController",
     "Method": "GetDepartmentById",
     "RelativePath": "api/Department/{id}",
     "HttpMethod": "GET",
@@ -26,7 +100,7 @@
     "ReturnTypes": []
   },
   {
-    "ContainingType": "MultiTenantHMS.api.Controllers.DepartmentController",
+    "ContainingType": "MultiTenantHMS.api.Controllers.Master.DepartmentController",
     "Method": "DeleteDepartment",
     "RelativePath": "api/Department/{id}",
     "HttpMethod": "DELETE",
@@ -42,7 +116,7 @@
     "ReturnTypes": []
   },
   {
-    "ContainingType": "MultiTenantHMS.api.Controllers.DepartmentController",
+    "ContainingType": "MultiTenantHMS.api.Controllers.Master.DepartmentController",
     "Method": "AddDepartment",
     "RelativePath": "api/Department/add",
     "HttpMethod": "POST",
@@ -58,7 +132,7 @@
     "ReturnTypes": []
   },
   {
-    "ContainingType": "MultiTenantHMS.api.Controllers.DepartmentController",
+    "ContainingType": "MultiTenantHMS.api.Controllers.Master.DepartmentController",
     "Method": "UpdateDepartment",
     "RelativePath": "api/Department/update",
     "HttpMethod": "PUT",
@@ -158,22 +232,6 @@
     "ReturnTypes": []
   },
   {
-    "ContainingType": "MultiTenantHMS.api.Controllers.Master.PatientsController",
-    "Method": "AddPatient",
-    "RelativePath": "api/Patients/add",
-    "HttpMethod": "POST",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [
-      {
-        "Name": "model",
-        "Type": "MultiTenantHMS.DAL.Models.PatientModel",
-        "IsRequired": true
-      }
-    ],
-    "ReturnTypes": []
-  },
-  {
     "ContainingType": "MultiTenantHMS.api.Controllers.PatientsController",
     "Method": "UpdatePatient",
     "RelativePath": "api/Patients/update",
@@ -206,6 +264,159 @@
     "ReturnTypes": []
   },
   {
+    "ContainingType": "MultiTenantHMS.api.Controllers.Admin.RoleController",
+    "Method": "AddUser",
+    "RelativePath": "api/Role/Add",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "role",
+        "Type": "MultiTenantHMS.DAL.Models.RoleModel",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "MultiTenantHMS.api.Controllers.Admin.RoleController",
+    "Method": "DeleteRole",
+    "RelativePath": "api/Role/Delete/{role}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "roleId",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "role",
+        "Type": "",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "MultiTenantHMS.api.Controllers.Admin.RoleController",
+    "Method": "GetAllRole",
+    "RelativePath": "api/Role/GetAll",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "MultiTenantHMS.api.Controllers.Admin.RoleController",
+    "Method": "GetRoleById",
+    "RelativePath": "api/Role/GetById/{roleId}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "roleId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "MultiTenantHMS.api.Controllers.Admin.RoleController",
+    "Method": "UpdateUser",
+    "RelativePath": "api/Role/Update",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "role",
+        "Type": "MultiTenantHMS.DAL.Models.RoleModel",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "MultiTenantHMS.api.Controllers.Master.ServiceController",
+    "Method": "GetAllServices",
+    "RelativePath": "api/Service",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "MultiTenantHMS.api.Controllers.Master.ServiceController",
+    "Method": "GetServiceById",
+    "RelativePath": "api/Service/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "MultiTenantHMS.api.Controllers.Master.ServiceController",
+    "Method": "AddService",
+    "RelativePath": "api/Service/add",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "model",
+        "Type": "MultiTenantHMS.DAL.Models.ServiceModel",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "MultiTenantHMS.api.Controllers.Master.ServiceController",
+    "Method": "DeleteService",
+    "RelativePath": "api/Service/delete/{id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "MultiTenantHMS.api.Controllers.Master.ServiceController",
+    "Method": "UpdateService",
+    "RelativePath": "api/Service/update",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "model",
+        "Type": "MultiTenantHMS.DAL.Models.ServiceModel",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
     "ContainingType": "MultiTenantHMS.api.Controllers.Admin.UserController",
     "Method": "AddUser",
     "RelativePath": "api/User/AddUser",
@@ -224,7 +435,7 @@
   {
     "ContainingType": "MultiTenantHMS.api.Controllers.Admin.UserController",
     "Method": "DeleteUser",
-    "RelativePath": "api/User/DeleteUser",
+    "RelativePath": "api/User/DeleteUser/{userId}",
     "HttpMethod": "DELETE",
     "IsController": true,
     "Order": 0,
@@ -232,7 +443,7 @@
       {
         "Name": "userId",
         "Type": "System.Int32",
-        "IsRequired": false
+        "IsRequired": true
       }
     ],
     "ReturnTypes": []
@@ -250,7 +461,7 @@
   {
     "ContainingType": "MultiTenantHMS.api.Controllers.Admin.UserController",
     "Method": "GetUserById",
-    "RelativePath": "api/User/GetUserById",
+    "RelativePath": "api/User/GetUserById/{userId}",
     "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,
@@ -258,7 +469,7 @@
       {
         "Name": "userId",
         "Type": "System.Int32",
-        "IsRequired": false
+        "IsRequired": true
       }
     ],
     "ReturnTypes": []
