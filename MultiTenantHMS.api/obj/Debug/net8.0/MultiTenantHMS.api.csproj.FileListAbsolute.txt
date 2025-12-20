@@ -174,3 +174,15 @@ C:\Users\swapn\source\repos\MultiTenantHMS.api\MultiTenantHMS.api\obj\Debug\net8
 C:\Users\swapn\source\repos\MultiTenantHMS.api\MultiTenantHMS.api\obj\Debug\net8.0\MultiTenantHMS.api.pdb
 C:\Users\swapn\source\repos\MultiTenantHMS.api\MultiTenantHMS.api\obj\Debug\net8.0\MultiTenantHMS.api.genruntimeconfig.cache
 C:\Users\swapn\source\repos\MultiTenantHMS.api\MultiTenantHMS.api\obj\Debug\net8.0\ref\MultiTenantHMS.api.dll
+E:\HMS\MultiTenantHMS.api\obj\Debug\net8.0\MultiTenantHMS.api.csproj.AssemblyReference.cache
+E:\HMS\MultiTenantHMS.api\obj\Debug\net8.0\rpswa.dswa.cache.json
+E:\HMS\MultiTenantHMS.api\obj\Debug\net8.0\MultiTenantHMS.api.GeneratedMSBuildEditorConfig.editorconfig
+E:\HMS\MultiTenantHMS.api\obj\Debug\net8.0\MultiTenantHMS.api.AssemblyInfoInputs.cache
+E:\HMS\MultiTenantHMS.api\obj\Debug\net8.0\MultiTenantHMS.api.AssemblyInfo.cs
+E:\HMS\MultiTenantHMS.api\obj\Debug\net8.0\MultiTenantHMS.api.csproj.CoreCompileInputs.cache
+E:\HMS\MultiTenantHMS.api\obj\Debug\net8.0\MultiTenantHMS.api.MvcApplicationPartsAssemblyInfo.cs
+E:\HMS\MultiTenantHMS.api\obj\Debug\net8.0\MultiTenantHMS.api.MvcApplicationPartsAssemblyInfo.cache
+E:\HMS\MultiTenantHMS.api\obj\Debug\net8.0\MultiTenantHMS.api.sourcelink.json
+E:\HMS\MultiTenantHMS.api\obj\Debug\net8.0\MultiTenantHMS.api.dll
+E:\HMS\MultiTenantHMS.api\obj\Debug\net8.0\refint\MultiTenantHMS.api.dll
+E:\HMS\MultiTenantHMS.api\obj\Debug\net8.0\MultiTenantHMS.api.pdb

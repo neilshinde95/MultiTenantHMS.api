@@ -15,19 +15,12 @@ namespace MultiTenantHMS.BLL.Helper
         public const string ManageService = "sp_manage_service";
         public const string ManageDoctor = "sp_manage_doctor";
         public const string ManageLab = "sp_manage_lab";
-        #endregion
-
-        public const string ManageService = "sp_manage_service";
-
-        public const string ManageRole = "sp_manage_role";
-        #region Admin 
         public const string ManageUser = "sp_manage_user";
         public const string ManageRole = "sp_manage_role";
-        #endregion
-
-        #region Main 
         public const string ManageHospital = "sp_manage_hospital";
-        #endregion
 
+        #endregion
+        //public const string ManageService = "sp_manage_service";
+        //public const string ManageRole = "sp_manage_role";
     }
 }

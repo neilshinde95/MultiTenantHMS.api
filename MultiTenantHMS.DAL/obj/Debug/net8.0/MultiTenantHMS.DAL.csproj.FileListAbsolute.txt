@@ -22,3 +22,15 @@ C:\Users\swapn\source\repos\MultiTenantHMS.api\MultiTenantHMS.DAL\obj\Debug\net8
 C:\Users\swapn\source\repos\MultiTenantHMS.api\MultiTenantHMS.DAL\obj\Debug\net8.0\refint\MultiTenantHMS.DAL.dll
 C:\Users\swapn\source\repos\MultiTenantHMS.api\MultiTenantHMS.DAL\obj\Debug\net8.0\MultiTenantHMS.DAL.pdb
 C:\Users\swapn\source\repos\MultiTenantHMS.api\MultiTenantHMS.DAL\obj\Debug\net8.0\ref\MultiTenantHMS.DAL.dll
+E:\HMS\MultiTenantHMS.DAL\bin\Debug\net8.0\MultiTenantHMS.DAL.deps.json
+E:\HMS\MultiTenantHMS.DAL\bin\Debug\net8.0\MultiTenantHMS.DAL.dll
+E:\HMS\MultiTenantHMS.DAL\bin\Debug\net8.0\MultiTenantHMS.DAL.pdb
+E:\HMS\MultiTenantHMS.DAL\obj\Debug\net8.0\MultiTenantHMS.DAL.GeneratedMSBuildEditorConfig.editorconfig
+E:\HMS\MultiTenantHMS.DAL\obj\Debug\net8.0\MultiTenantHMS.DAL.AssemblyInfoInputs.cache
+E:\HMS\MultiTenantHMS.DAL\obj\Debug\net8.0\MultiTenantHMS.DAL.AssemblyInfo.cs
+E:\HMS\MultiTenantHMS.DAL\obj\Debug\net8.0\MultiTenantHMS.DAL.csproj.CoreCompileInputs.cache
+E:\HMS\MultiTenantHMS.DAL\obj\Debug\net8.0\MultiTenantHMS.DAL.sourcelink.json
+E:\HMS\MultiTenantHMS.DAL\obj\Debug\net8.0\MultiTenantHMS.DAL.dll
+E:\HMS\MultiTenantHMS.DAL\obj\Debug\net8.0\refint\MultiTenantHMS.DAL.dll
+E:\HMS\MultiTenantHMS.DAL\obj\Debug\net8.0\MultiTenantHMS.DAL.pdb
+E:\HMS\MultiTenantHMS.DAL\obj\Debug\net8.0\ref\MultiTenantHMS.DAL.dll

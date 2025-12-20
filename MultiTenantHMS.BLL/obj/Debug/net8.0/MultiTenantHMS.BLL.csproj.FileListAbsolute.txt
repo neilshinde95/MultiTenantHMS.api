@@ -30,3 +30,12 @@ C:\Users\swapn\source\repos\MultiTenantHMS.api\MultiTenantHMS.BLL\obj\Debug\net8
 C:\Users\swapn\source\repos\MultiTenantHMS.api\MultiTenantHMS.BLL\obj\Debug\net8.0\refint\MultiTenantHMS.BLL.dll
 C:\Users\swapn\source\repos\MultiTenantHMS.api\MultiTenantHMS.BLL\obj\Debug\net8.0\MultiTenantHMS.BLL.pdb
 C:\Users\swapn\source\repos\MultiTenantHMS.api\MultiTenantHMS.BLL\obj\Debug\net8.0\ref\MultiTenantHMS.BLL.dll
+E:\HMS\MultiTenantHMS.BLL\obj\Debug\net8.0\MultiTenantHMS.BLL.csproj.AssemblyReference.cache
+E:\HMS\MultiTenantHMS.BLL\obj\Debug\net8.0\MultiTenantHMS.BLL.GeneratedMSBuildEditorConfig.editorconfig
+E:\HMS\MultiTenantHMS.BLL\obj\Debug\net8.0\MultiTenantHMS.BLL.AssemblyInfoInputs.cache
+E:\HMS\MultiTenantHMS.BLL\obj\Debug\net8.0\MultiTenantHMS.BLL.AssemblyInfo.cs
+E:\HMS\MultiTenantHMS.BLL\obj\Debug\net8.0\MultiTenantHMS.BLL.csproj.CoreCompileInputs.cache
+E:\HMS\MultiTenantHMS.BLL\obj\Debug\net8.0\MultiTenantHMS.BLL.sourcelink.json
+E:\HMS\MultiTenantHMS.BLL\obj\Debug\net8.0\MultiTenantHMS.BLL.dll
+E:\HMS\MultiTenantHMS.BLL\obj\Debug\net8.0\refint\MultiTenantHMS.BLL.dll
+E:\HMS\MultiTenantHMS.BLL\obj\Debug\net8.0\MultiTenantHMS.BLL.pdb
