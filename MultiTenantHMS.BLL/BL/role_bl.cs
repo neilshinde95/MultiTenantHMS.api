@@ -121,5 +121,27 @@ namespace MultiTenantHMS.BLL.BL
 
             }
         }
+
+        public static async Task<JsonObject> GetAllRoles(ICommonService service)
+        {
+            try
+            {
+                var requestModel = new JsonObject
+                {
+                    ["Id"] = 0,
+                    ["Opration"] = "s",
+                    ["ProcedureName"] = _procedureName,
+                    ["JsonData"] = null
+                };
+                return await service.ManageAsync(requestModel);
+            }
+            catch (Exception ex)
+            {
+                await ErrorLogger.LogErrorAsync(ex); // ensure logging is awaited if it's async
+                return JsonHelper.Response(false, "Something went wrong while processing your request.", null);
+
+            }
+
+        }
     }
 }

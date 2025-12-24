@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("MultiTenantHMS.DAL")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+0d7b66590b958ea12cd9b62f7a69a615fe5b9948")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+4ef8e896130a6cdd4fb05bd70772ffd66c3e2382")]
 [assembly: System.Reflection.AssemblyProductAttribute("MultiTenantHMS.DAL")]
 [assembly: System.Reflection.AssemblyTitleAttribute("MultiTenantHMS.DAL")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
